@@ -19,3 +19,4 @@ Sign in to the AWS Management Console by copying the **Sign-in link, Username, a
 
 <inline-video source="https://www.youtube.com/embed/r4YIdn2eTm4" width="auto" height="auto" />
 
+<validation step="525fd05c-cd6c-4c84-9954-1bbad9e07c8c" />
