@@ -17,6 +17,7 @@ Sign in to the AWS Management Console by copying the **Sign-in link, Username, a
 
 <question source="labguidepage001UT6wuTfv" />
 
+
 <inline-video source="https://www.youtube.com/embed/r4YIdn2eTm4" width="auto" height="auto" />
 
 
