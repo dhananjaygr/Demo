@@ -14,10 +14,10 @@ Option 4: N2
 Option 1 : 1
 
 ## Correct Answer Feedback
-Correct answer, H20 is the Correct answer
+Correct answer, H2O is the Correct answer
 
 ## Incorrect Answer Feedback
-Incorrect answer, H20 is the Correct answer
+Incorrect answer, H2O is the Correct answer
 
 ## Number of Retries
 0
