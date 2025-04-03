@@ -6,6 +6,7 @@
 
 <inject key="azureaduseremail" enableCopy="false" enableClickToPaste="false" />
 
-<inject value="keyname" enableCopy="false" enableClickToPaste="false" />
+<inject value="keyname-Dashboard" enableCopy="false" enableClickToPaste="false" />
 
 <inject enableCopy="false" enableClickToPaste="false" defaultValue="Dashboard"/>
+
