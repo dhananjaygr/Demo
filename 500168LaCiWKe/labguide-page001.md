@@ -2,7 +2,7 @@
 
 
 
-<inject key="keyname" value="-Dashboard" cloudname="Microsoft Azure" enableCopy="true" enableClickToPaste="false" defaultValue="odl-user-123"/> </br>
+<inject key="keyname" value="-Dashboard" cloudname="Microsoft Azure" enableCopy="true" enableClickToPaste="false" defaultValue=""/> </br>
 
 <inject key="azureaduseremail" enableCopy="false" enableClickToPaste="false" /> </br>
 
