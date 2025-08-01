@@ -1,4 +1,4 @@
-<div style="margin-right: 50px; margin-left: 30px;">
+*******<div style="margin-right: 50px; margin-left: 30px;">
 
 # Exercise: Create a control for data resources that are not in compliance with the data classification labeling
 ___
@@ -43,19 +43,9 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 
     Severity of the data classifier is only part of the formula that is used to designate the severity of any related data finding. Remember that it is the number of unique occurrences.
 
-1. Under Matcher Logic in the Find text matching this Regex box, enter: 
+1. Under Matcher Logic in the Find text matching this Regex box, enter:
 
-    <div style="margin-right: 150px;">
-
-        \b(?:Confidential - Internally Use Only|Confidential|Secret|Unclassified|)\b
-
-    </div>
-    
-    This classifier uses '|' to define OR conditions between the possible matches. We've ordered this rule to specifically match on the full string of 'Confidential - Internally Use Only' first. If 'Confidential' were lists first, it would match on both uses of confidential. While this appears to have no effect in the finding results, it dloes. The masked sample will be based on the full string of the match. 
-
-    <p align="left">
-       <img width="380" height="558" img src="img/dspm-classifier-any-settings.png"/>
-        </p>
+  ![demo01.png](https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/dhananjaygr/Demo/main/50448j2hiW1Tc/images/demo01.png)
 
 1. Scroll down to the Findings section, in the **Minimum unique matches** field, enter **1**.
 
@@ -121,9 +111,7 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
     
     Let's consider this query now. We select buckets that have occurrences of unstructured data, but they do not have any data finding that matches our required classification levels. What does that mean? It means that we have found a bucket with files that we likely care about, but none of those files are tagged using the data classification system our manager asked us to check for. So this is a good start. Now let's save this as a control so we generate as issue each time this rule files. The resulting issues are a resource level view of our question so we can remediate each resource individually.
    
-    <p align="left">
-       <img width="700" height="128" img src="img/dspm-control-no-classifier-hits.png"/>
-        </p>
+![demo02.png](https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/dhananjaygr/Demo/main/50448j2hiW1Tc/images/demo02.png)
    
 1. To create the control, click **Save as control** to the right of the query.
 
@@ -167,9 +155,7 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 
 1. Click on the  **<inject key="ODLUser" enableCopy="false"></inject>-Missing Required Sensitivity Classification** control (*your control*) to open the control drawer page. 
 
-    <p align="left">
-       <img width="600" height="434" img src="img/dspm-control-final.png"/>
-        </p>
+![demo03.png](https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/dhananjaygr/Demo/main/50448j2hiW1Tc/images/demo03.png)
 
 1. To see which resources match the control, click the **View on Security Graph** button.
     
@@ -187,4 +173,4 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 
 Go back to the Lab page, and click on the trash can icon, next to the time. This will end your lab.
 
-</div>
+</div>******Bold Text*****
