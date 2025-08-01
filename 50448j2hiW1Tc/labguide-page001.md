@@ -23,9 +23,9 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 ## Task 1. Create the data classifier rule that matches on any of the supported classification levels
 <br>
 
-1. In the Wiz portal, navigate to **Policies > Data Classification Rules**, and then click the **Create New Data Classification Rule** button.
+1. In the Wiz portal, navigate to Policies > Data Classification Rules, and then click the Create New Data Classification Rule button.
 
-1. Under Classifier Type, select **Data match**.
+1. Under Classifier Type, select Data match.
 
 1. In the Name field, enter:
 
@@ -35,11 +35,11 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
    
       </div>
 
-1. In the Data Type dropdown, select **Other**.
+1. In the Data Type dropdown, select Other.
 
     As we are focused on proprietary information, this rule does not match any known definitions, such as PHI or PII. As these types are used as filters in other pages, you should strive to keep them as accurate as possible.
 
-1. From the Severity dropdown box, select **Medium**. We pick a middle ground here leveraging the more exact matches on Secret and Classified to indicate greater concern.
+1. From the Severity dropdown box, select Medium. We pick a middle ground here leveraging the more exact matches on Secret and Classified to indicate greater concern.
 
     Severity of the data classifier is only part of the formula that is used to designate the severity of any related data finding. Remember that it is the number of unique occurrences.
 
@@ -47,13 +47,13 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 
   ![demo01.png](https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/dhananjaygr/Demo/main/50448j2hiW1Tc/images/demo01.png)
 
-1. Scroll down to the Findings section, in the **Minimum unique matches** field, enter **1**.
+1. Scroll down to the Findings section, in the Minimum unique matches field, enter 1.
 
-1. In the Masking drop-down meny, select **Partial Mask**.
+1. In the Masking drop-down meny, select Partial Mask.
     
     We select partial mask so we can get an idea of what we are seeing in the files. A full mask does not let us scan quickly to see what content is being tagged. This is especially useful when you have OR conditions in the matcher. 
 
-1. Click **Create Rule** to save the rule in the Wiz tenant.
+1. Click Create Rule to save the rule in the Wiz tenant.
 
 <br>
 
@@ -112,36 +112,6 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
     Let's consider this query now. We select buckets that have occurrences of unstructured data, but they do not have any data finding that matches our required classification levels. What does that mean? It means that we have found a bucket with files that we likely care about, but none of those files are tagged using the data classification system our manager asked us to check for. So this is a good start. Now let's save this as a control so we generate as issue each time this rule files. The resulting issues are a resource level view of our question so we can remediate each resource individually.
    
 ![demo02.png](https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/dhananjaygr/Demo/main/50448j2hiW1Tc/images/demo02.png)
-   
-1. To create the control, click **Save as control** to the right of the query.
-
-1. In the New Control page, go to the Issue Severity dropdown box and select **High**. While the data sensitivity level is medium, this is a resource-wide issue. 
-
-1. In the Name box, enter a name for this rule using the following format:
-
-    <div style="margin-right: 150px;">
-
-       <inject key="ODLUser"></inject>-Missing Required Sensitivity Classification
-
-    </div>
-
-1. In the Description box, enter the following description: 
-
-    <div style="margin-right: 150px;">
-
-        This control looks for any buckets that contain unstructured data, such as Word files, PDFs, and text files, that are not tagged with one of the required sensitive classification levels. The intention is to find the resources so we can remediate them before they become a problem. It also satisfies our compliance requirement to periodically review resources for proper tagging.
-
-    </div>
-
-1. In the Recommendations box, enter a description of how to remediate any resources that have this issue. In our scenario, we can use: 
-
-    <div style="margin-right: 150px;">
-
-        To resolve this issue, review all unstructured files on this bucket and ensure that they have the correct sensitivity classification tag setting. All files should be tagged as 'Secret', 'Confidential', or 'Unclassified'.
-
-    </div>
-
-1. To save the control, click **Create Control**.
 
 <br>
 
@@ -149,23 +119,23 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 
 <br>
 
-1. Navigate to **Policies > Controls**.
+1. Navigate to Policies > Controls.
 
-1. Click on **All controls outside framework** and scroll down until you find the control you just defined.
+1. Click on All controls outside framework and scroll down until you find the control you just defined.
 
-1. Click on the  **<inject key="ODLUser" enableCopy="false"></inject>-Missing Required Sensitivity Classification** control (*your control*) to open the control drawer page. 
+1. Click on the  <inject key="ODLUser" enableCopy="false"></inject>-Missing Required Sensitivity Classification control (your control) to open the control drawer page. 
 
 ![demo03.png](https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/dhananjaygr/Demo/main/50448j2hiW1Tc/images/demo03.png)
 
-1. To see which resources match the control, click the **View on Security Graph** button.
+1. To see which resources match the control, click the View on Security Graph button.
     
     <u>Expected Result:</u> The Security Graph page appears with the query defined and the results appear in the table view.
 
-1. Navigate to **Issues** and search for the control you have created.
+1. Navigate to Issues and search for the control you have created.
 
 1. Expand the Rule. You will see all instances that match the control (Issues).
 
-    **Note:** In some cases, issues may take up to 24 hours to appear in the portal. 
+    Note: In some cases, issues may take up to 24 hours to appear in the portal. 
 
 <br>
 
@@ -173,4 +143,4 @@ Once the rules are defined and the bucket is rescanned, we will see some data st
 
 Go back to the Lab page, and click on the trash can icon, next to the time. This will end your lab.
 
-</div>******Bold Text*****
+</div>
